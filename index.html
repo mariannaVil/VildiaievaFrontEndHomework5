@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let year = prompt ('Введіть рік народження');
+        let city = prompt ('Введіть назву міста проживання');
+        let sport = prompt ('Введііть назву улюбленого спорту');
+        let age = new Date().getFullYear() - year;
+        let message = 'Твій вік ' + age +'\n'
+        switch (year) {
+            case null:
+                message = 'Шкода, що Ви не захотіли ввести свій вік' + '\n';
+                break;
+        }
+        switch (city) {      
+            case 'Київ':
+                message += 'Ти живеш у столиці України'+ '\n';
+                break;  
+            case 'Вашингтон':
+                message += 'Ти живеш у столиці Америки'+ '\n';
+                break; 
+            case 'Лондон':
+                message += 'Ти живеш у столиці Великобританії'+ '\n';
+                break; 
+            case null:
+                message += 'Шкода, що Ви не захотіли ввести своє місто' + '\n';
+                break;
+            default: 
+                message += 'Ти живеш у місті ' + city + '\n';                              
+        }   
+        switch (sport) {
+            case 'Плавання':
+                message += 'Круто! Хочеш стати Дрю Кіблер?';
+                break;
+            case 'Легка атлетика':
+                message += 'Круто! Хочеш стати Усейн Болт?';
+                break;
+            case 'Теніс':
+                message += 'Круто! Хочеш стати Кен Фек?';
+                break;
+            case null:
+               message += 'Шкода, що Ви не захотіли ввести свій спорт';            
+        }
+            alert(message);
+    </script>
+</body>
+</html>
